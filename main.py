@@ -37,6 +37,11 @@ button = st.button("Generate Recipe", type='primary', disabled=not cuisine, icon
 if button:
     with st.spinner('Processing ...', show_time=True):
         st.subheader('Recipe:', divider='gray')
+        response = langflow_recipe_generator(prompt)
+        st.write(response)
+
+
+
 
 
 
